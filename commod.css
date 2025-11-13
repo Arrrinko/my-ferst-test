@@ -1,0 +1,15 @@
+*{
+    font-family: "Rubik Mono One", sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #B3FBFF;
+    color: #C44D3B;
+}
+
+h1, h3, p, input{
+    margin: 0;
+}

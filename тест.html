@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практическая работа №1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./commod.css">
+    <link rel="stylesheet" href="./тест.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="title" id="que" style="display:flex;">
+            <h1 class="headline">Тест сомелье</h1>
+            <p class="text">узнай насколько ты разбираешься в вине</p>
+            <button type="button" class="button" id="button">Начать тест</button>
+        </div>
+        <div>
+            <div class="container" id="que_1" style="display: none;">
+                <div class="question">
+                    <h3>
+                        Какое вино обычно легче пить в жаркую погоду?
+                    </h3>
+                    <div class="answers" id="answer">
+                        <button class="answer" id="answerOneFalse">Тяжелое красное</button>
+                        <button class="answer" id="answerOneTrue">Сухое белое или розовое вино</button>
+                        <button class="answer" id="answerOneFalse_2">Крепленое вино</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container" id="que_2" style="display: none;">
+                <div class="question">
+                    <h3>
+                        Какой сорт винограда используется для производства легких белых вин?
+                    </h3>
+                    <div class="answers" id="answer">
+                        <button class="answer" id="answerTwoTrue">Шардоне или Совиньон Блан</button>
+                        <button class="answer" id="answerTwoFalse">Пино Нуар</button>
+                        <button class="answer" id="answerTwoFalse_2">Каберне Совиньон</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="que_3" style="display: none;">
+                <div class="question">
+                    <h3>
+                        Какая страна лидирует по производству вина в мире?
+                    </h3>
+                    <div class="answers">
+                        <button class="answer" id="answerThreeTrue">Италия</button>
+                        <button class="answer" id="answerThreeFalse">Испания</button>
+                        <button class="answer" id="answerThreeFalse_2">Франция</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="que_4" style="display: none;">
+                <div class="question">
+                    <h3>
+                        Какое вино принято подавать охлажденным?
+                    </h3>
+                    <div class="answers">
+                        <button class="answer" id="answerFourFalse">Оранжевое и крепленое вино</button>
+                        <button class="answer" id="answerFourFalse_2">Красное</button>
+                        <button class="answer" id="answerFourTrue">Белое и розовое вино</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="que_5" style="display: none;">
+                <div class="question">
+                    <p class="que_text">Прочитайте текст и введите соответствующий термин в поле ввода</p>
+                    <h3>
+                        безалкогольный или алкогольный напиток, который употребляют перед едой.
+                    </h3>
+                    <div class="answers">
+                        <form action="">
+                        <label for="answ_5" class="answer">
+                            <input type="text" class="answer_open" id="answerOpenOne">
+                        </label>
+                    </form>
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="que_6" style="display: none;">
+                <div class="question">
+                    <p class="que_text">Прочитайте текст и введите соответствующий термин в поле ввода</p>
+                    <h3>
+                        Игристое вино из Франции, которое производят с вторичным брожением в бутылке.
+                    </h3>
+                    <div class="answers">
+                        <label for="answ_6" class="answer">
+                            <input type="text" class="answer_open" id="answerOpenTwo">
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./тест.js"></script>
+</body>
+
+</html>
