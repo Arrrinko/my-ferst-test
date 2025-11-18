@@ -60,12 +60,12 @@ answerTwoFalse_2.addEventListener('click', () => {
     que_2.style.display = 'none'
     que_3.style.display = 'flex'
 })
- 
+
 
 // третий вопрос
 const answerThreeTrue = document.getElementById('answerThreeTrue')
 
-answerThreeTrue.addEventListener('click', () =>{
+answerThreeTrue.addEventListener('click', () => {
     alert('Это правильный ответ!')
     que_3.style.display = 'none'
     que_4.style.display = 'flex'
@@ -74,7 +74,7 @@ answerThreeTrue.addEventListener('click', () =>{
 
 const answerThreeFalse = document.getElementById('answerThreeFalse')
 
-answerThreeFalse.addEventListener('click', () =>{
+answerThreeFalse.addEventListener('click', () => {
     alert('Это неправильный ответ!')
     que_3.style.display = 'none'
     que_4.style.display = 'flex'
@@ -83,7 +83,7 @@ answerThreeFalse.addEventListener('click', () =>{
 
 const answerThreeFalse_2 = document.getElementById('answerThreeFalse_2')
 
-answerThreeFalse_2.addEventListener('click', () =>{
+answerThreeFalse_2.addEventListener('click', () => {
     alert('Это неправильный ответ!')
     que_3.style.display = 'none'
     que_4.style.display = 'flex'
@@ -93,7 +93,7 @@ answerThreeFalse_2.addEventListener('click', () =>{
 
 const answerFourTrue = document.getElementById('answerFourTrue')
 
-answerFourTrue.addEventListener('click', () =>{
+answerFourTrue.addEventListener('click', () => {
     alert('Это был правильный ответ!')
     que_4.style.display = 'none'
     que_5.style.display = 'flex'
@@ -101,7 +101,7 @@ answerFourTrue.addEventListener('click', () =>{
 
 const answerFourFalse = document.getElementById('answerFourFalse')
 
-answerFourFalse.addEventListener('click', () =>{
+answerFourFalse.addEventListener('click', () => {
     alert('Это был неправильный ответ!')
     que_4.style.display = 'none'
     que_5.style.display = 'flex'
@@ -109,7 +109,7 @@ answerFourFalse.addEventListener('click', () =>{
 
 const answerFourFalse_2 = document.getElementById('answerFourFalse_2')
 
-answerFourFalse_2.addEventListener('click', () =>{
+answerFourFalse_2.addEventListener('click', () => {
     alert('Это был неправильный ответ!')
     que_4.style.display = 'none'
     que_5.style.display = 'flex'
@@ -121,23 +121,14 @@ const answerOpenOneTrue = 'Аперетив';
 const upperAnswer = answerOpenOneTrue.toUpperCase()
 console.log(upperAnswer)
 
-// const answerUser = document.getElementById('answerOpenOne')
 
+formOne.addEventListener('keydown', function (event) {
+    // event.key содержит символ нажатой клавиши
+    console.log('Клавиша нажата:', event.key);
 
-// нужно чтобы при отправке формы, переключался следующий слайд с вопросами 
-// и ответ сравнивался с правильным 
-
-// if(answerOpenOneTrue === answerUser){
-//     console.log('Ваш ответ правильный!')
-// } else [
-//     console.log('Ответ неверный')
-// ]
-
-
-function displayFormData() {
-    // Получаем значения из полей ввода
-    const answerUser = document.getElementById('answerOpenOne').value;
-  
-    // Выводим значения в консоль
-    alert('Ваш ответ:', answerUser);
-  } // это не сработалопше
+    // Пример: если нажата клавиша Enter
+    if (event.key === ' ') {
+        que_5.style.display = 'none'
+        que_6.style.display = 'flex'
+    }
+});
