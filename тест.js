@@ -117,18 +117,61 @@ answerFourFalse_2.addEventListener('click', () => {
 
 // пятый вопрос
 
-const answerOpenOneTrue = 'Аперетив';
-const upperAnswer = answerOpenOneTrue.toUpperCase()
-console.log(upperAnswer)
+// const answerOpenOneTrue = 'Аперетив';
+// const upperAnswer = answerOpenOneTrue
+// console.log(upperAnswer)
+
+// const userAnswer = document.getElementById('answerOpenOne')
+
+// formOne.addEventListener('keydown', function (event) {
+//     // event.key содержит символ нажатой клавиши
+//     console.log('Клавиша нажата:', event.key);
+
+//     // Пример: если нажата клавиша Enter
+//     if (event.key === ' ') {
+//         que_5.style.display = 'none'
+//         que_6.style.display = 'flex'
+//     }
+// });
+
+// // попробует реализовать проверку ответа пользователя 
 
 
-formOne.addEventListener('keydown', function (event) {
-    // event.key содержит символ нажатой клавиши
-    console.log('Клавиша нажата:', event.key);
+// if ( userAnswer === answerOpenOneTrue ){
+//     console.log('Ответ правильный')
+// } else 
+//     console.log('Ничего не работает блять')
 
-    // Пример: если нажата клавиша Enter
-    if (event.key === ' ') {
-        que_5.style.display = 'none'
-        que_6.style.display = 'flex'
+
+// пятый вопрос (вторая попытка)
+
+// const userAnswer = document.getElementById('answerOpenOne')
+
+// userAnswer.addEventListener('submit', () =>{
+//     console.log('Пипипупу')
+// })
+
+// Получаем элемент input
+const input = document.getElementById('answerOpenOne');
+
+// Обработчик события keydown для проверки при нажатии Enter
+input.addEventListener('keydown', function(e) {
+    // Проверяем, что нажата клавиша Enter (код 13)
+    if (e.key === 'Enter') {
+        
+        const userAnswer = this.value.trim().toUpperCase();
+        const correctAnswers = ('АПЕРЕТИВ');
+        
+        // Проверяем ответ
+        if (correctAnswers.includes(userAnswer)) {
+            alert(console.log('Правильно! Это аперитив.'))
+        } else if (userAnswer === '') {
+            // Пустой вво
+            alert(console.log('Введите ответ'))
+        } else {
+            // Неправильный ответ
+            alert(console.log('Неправильно. Попробуйте еще раз!'))
+        }
     }
 });
+
