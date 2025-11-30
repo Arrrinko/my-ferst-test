@@ -154,24 +154,42 @@ answerFourFalse_2.addEventListener('click', () => {
 // Получаем элемент input
 const input = document.getElementById('answerOpenOne');
 
+
 // Обработчик события keydown для проверки при нажатии Enter
-input.addEventListener('keydown', function(e) {
+input.addEventListener('keydown', function (e) {
     // Проверяем, что нажата клавиша Enter (код 13)
+
     if (e.key === 'Enter') {
-        
+        e.preventDefault();
+
         const userAnswer = this.value.trim().toUpperCase();
-        const correctAnswers = ('АПЕРЕТИВ');
-        
-        // Проверяем ответ
+        const correctAnswers = ('АПЕРИТИВ');
+
+
         if (correctAnswers.includes(userAnswer)) {
-            alert(console.log('Правильно! Это аперитив.'))
+            alert('Правильно! Это аперитив.')
+            setTimeout(() => {
+                if (que_5) que_5.style.display = 'none';
+                if (que_6) que_6.style.display = 'flex';
+            });
+
         } else if (userAnswer === '') {
             // Пустой вво
-            alert(console.log('Введите ответ'))
+            alert('Введите ответ')
+            setTimeout(() => {
+                if (que_5) que_5.style.display = 'none';
+                if (que_6) que_6.style.display = 'flex';
+            });
         } else {
             // Неправильный ответ
-            alert(console.log('Неправильно. Попробуйте еще раз!'))
+            alert('Неправильный ответ')
+            setTimeout(() => {
+                if (que_5) que_5.style.display = 'none';
+                if (que_6) que_6.style.display = 'flex';
+            });
         }
     }
 });
+
+
 
