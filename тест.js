@@ -191,5 +191,44 @@ input.addEventListener('keydown', function (e) {
     }
 });
 
+// шестой вопрос 
 
 
+const inputTwo = document.getElementById('answerOpenTwo');
+
+
+// Обработчик события keydown для проверки при нажатии Enter
+input.addEventListener('keydown', function (e) {
+    // Проверяем, что нажата клавиша Enter (код 13)
+
+    if (e.key === 'Enter') {
+        e.preventDefault();
+
+        const userAnswer = this.value.trim().toUpperCase();
+        const correctAnswers = ('ШАМПАНСКОЕ');
+
+
+        if (correctAnswers.includes(userAnswer)) {
+            alert('Правильно!')
+            setTimeout(() => {
+                if (que_5) que_5.style.display = 'none';
+                if (que_6) que_6.style.display = 'flex';
+            });
+
+        } else if (userAnswer === '') {
+            // Пустой вво
+            alert('Введите ответ')
+            setTimeout(() => {
+                if (que_5) que_5.style.display = 'none';
+                if (que_6) que_6.style.display = 'flex';
+            });
+        } else {
+            // Неправильный ответ
+            alert('Неправильный ответ')
+            setTimeout(() => {
+                if (que_5) que_5.style.display = 'none';
+                if (que_6) que_6.style.display = 'flex';
+            });
+        }
+    }
+});
