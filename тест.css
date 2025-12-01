@@ -34,6 +34,14 @@ font-size: 66px;
     padding: 16px 10px;
 }
 
+.container .title .button_again{
+    background: #e6efbc;
+    color: #1A0908;
+    border: 2px solid;
+    border-radius: 7px;
+    padding: 16px 10px;
+}
+
 .container .question .answers{
     display: flex;
     flex-direction: column;

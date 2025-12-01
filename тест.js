@@ -6,7 +6,8 @@ const que_3 = document.getElementById('que_3')
 const que_4 = document.getElementById('que_4')
 const que_5 = document.getElementById('que_5')
 const que_6 = document.getElementById('que_6')
-
+const que_7 = document.getElementById('que_7')
+const answers = [];
 
 button.addEventListener('click', () => {
     alert('Мы начинаем тест')
@@ -18,12 +19,14 @@ const answerOneTrue = document.getElementById('answerOneTrue')
 
 answerOneTrue.addEventListener('click', () => {
     alert('Это правильный ответ')
+    answers.push(1)
     que_1.style.display = 'none'
     que_2.style.display = 'flex'
 })
 
 const answerOneFalse = document.getElementById('answerOneFalse')
 answerOneFalse.addEventListener('click', () => {
+    answers.push(0)
     alert('Это неправильный ответ')
     que_1.style.display = 'none'
     que_2.style.display = 'flex'
@@ -31,6 +34,7 @@ answerOneFalse.addEventListener('click', () => {
 
 const answerOneFalse_2 = document.getElementById('answerOneFalse_2')
 answerOneFalse_2.addEventListener('click', () => {
+    answers.push(0)
     alert('Это неправильный ответ')
     que_1.style.display = 'none'
     que_2.style.display = 'flex'
@@ -40,6 +44,7 @@ answerOneFalse_2.addEventListener('click', () => {
 const answerTwoTrue = document.getElementById('answerTwoTrue')
 
 answerTwoTrue.addEventListener('click', () => {
+    answers.push(1)
     alert('Это правильный ответ')
     que_2.style.display = 'none'
     que_3.style.display = 'flex'
@@ -48,6 +53,7 @@ answerTwoTrue.addEventListener('click', () => {
 const answerTwoFalse = document.getElementById('answerTwoFalse')
 
 answerTwoFalse.addEventListener('click', () => {
+    answers.push(0)
     alert('Это неправильный ответ')
     que_2.style.display = 'none'
     que_3.style.display = 'flex'
@@ -56,6 +62,7 @@ answerTwoFalse.addEventListener('click', () => {
 const answerTwoFalse_2 = document.getElementById('answerTwoFalse_2')
 
 answerTwoFalse_2.addEventListener('click', () => {
+    answers.push(0)
     alert('Это неправильный ответ')
     que_2.style.display = 'none'
     que_3.style.display = 'flex'
@@ -66,6 +73,7 @@ answerTwoFalse_2.addEventListener('click', () => {
 const answerThreeTrue = document.getElementById('answerThreeTrue')
 
 answerThreeTrue.addEventListener('click', () => {
+    answers.push(1)
     alert('Это правильный ответ!')
     que_3.style.display = 'none'
     que_4.style.display = 'flex'
@@ -75,6 +83,7 @@ answerThreeTrue.addEventListener('click', () => {
 const answerThreeFalse = document.getElementById('answerThreeFalse')
 
 answerThreeFalse.addEventListener('click', () => {
+    answers.push(0)
     alert('Это неправильный ответ!')
     que_3.style.display = 'none'
     que_4.style.display = 'flex'
@@ -84,6 +93,7 @@ answerThreeFalse.addEventListener('click', () => {
 const answerThreeFalse_2 = document.getElementById('answerThreeFalse_2')
 
 answerThreeFalse_2.addEventListener('click', () => {
+    answers.push(0)
     alert('Это неправильный ответ!')
     que_3.style.display = 'none'
     que_4.style.display = 'flex'
@@ -94,6 +104,7 @@ answerThreeFalse_2.addEventListener('click', () => {
 const answerFourTrue = document.getElementById('answerFourTrue')
 
 answerFourTrue.addEventListener('click', () => {
+    answers.push(1)
     alert('Это был правильный ответ!')
     que_4.style.display = 'none'
     que_5.style.display = 'flex'
@@ -102,6 +113,7 @@ answerFourTrue.addEventListener('click', () => {
 const answerFourFalse = document.getElementById('answerFourFalse')
 
 answerFourFalse.addEventListener('click', () => {
+    answers.push(0)
     alert('Это был неправильный ответ!')
     que_4.style.display = 'none'
     que_5.style.display = 'flex'
@@ -110,46 +122,12 @@ answerFourFalse.addEventListener('click', () => {
 const answerFourFalse_2 = document.getElementById('answerFourFalse_2')
 
 answerFourFalse_2.addEventListener('click', () => {
+    answers.push(0)
     alert('Это был неправильный ответ!')
     que_4.style.display = 'none'
     que_5.style.display = 'flex'
 })
 
-// пятый вопрос
-
-// const answerOpenOneTrue = 'Аперетив';
-// const upperAnswer = answerOpenOneTrue
-// console.log(upperAnswer)
-
-// const userAnswer = document.getElementById('answerOpenOne')
-
-// formOne.addEventListener('keydown', function (event) {
-//     // event.key содержит символ нажатой клавиши
-//     console.log('Клавиша нажата:', event.key);
-
-//     // Пример: если нажата клавиша Enter
-//     if (event.key === ' ') {
-//         que_5.style.display = 'none'
-//         que_6.style.display = 'flex'
-//     }
-// });
-
-// // попробует реализовать проверку ответа пользователя 
-
-
-// if ( userAnswer === answerOpenOneTrue ){
-//     console.log('Ответ правильный')
-// } else 
-//     console.log('Ничего не работает блять')
-
-
-// пятый вопрос (вторая попытка)
-
-// const userAnswer = document.getElementById('answerOpenOne')
-
-// userAnswer.addEventListener('submit', () =>{
-//     console.log('Пипипупу')
-// })
 
 // Получаем элемент input
 const input = document.getElementById('answerOpenOne');
@@ -167,6 +145,7 @@ input.addEventListener('keydown', function (e) {
 
 
         if (correctAnswers.includes(userAnswer)) {
+            answers.push(1)
             alert('Правильно! Это аперитив.')
             setTimeout(() => {
                 if (que_5) que_5.style.display = 'none';
@@ -174,14 +153,14 @@ input.addEventListener('keydown', function (e) {
             });
 
         } else if (userAnswer === '') {
-            // Пустой вво
+            answers.push(0)
             alert('Введите ответ')
             setTimeout(() => {
                 if (que_5) que_5.style.display = 'none';
                 if (que_6) que_6.style.display = 'flex';
             });
         } else {
-            // Неправильный ответ
+            answers.push(0)
             alert('Неправильный ответ')
             setTimeout(() => {
                 if (que_5) que_5.style.display = 'none';
@@ -198,7 +177,7 @@ const inputTwo = document.getElementById('answerOpenTwo');
 
 
 // Обработчик события keydown для проверки при нажатии Enter
-input.addEventListener('keydown', function (e) {
+inputTwo.addEventListener('keydown', function (e) {
     // Проверяем, что нажата клавиша Enter (код 13)
 
     if (e.key === 'Enter') {
@@ -209,26 +188,41 @@ input.addEventListener('keydown', function (e) {
 
 
         if (correctAnswers.includes(userAnswer)) {
+            answers.push(1)
             alert('Правильно!')
             setTimeout(() => {
-                if (que_5) que_5.style.display = 'none';
-                if (que_6) que_6.style.display = 'flex';
+                if (que_6) que_6.style.display = 'none';
+                if (que_7) que_7.style.display = 'flex';
             });
 
         } else if (userAnswer === '') {
-            // Пустой вво
+            answers.push(0)
             alert('Введите ответ')
             setTimeout(() => {
-                if (que_5) que_5.style.display = 'none';
-                if (que_6) que_6.style.display = 'flex';
+                if (que_6) que_6.style.display = 'none';
+                if (que_7) que_7.style.display = 'flex';
             });
         } else {
-            // Неправильный ответ
+            answers.push(0)
             alert('Неправильный ответ')
             setTimeout(() => {
-                if (que_5) que_5.style.display = 'none';
-                if (que_6) que_6.style.display = 'flex';
+                if (que_6) que_6.style.display = 'none';
+                if (que_7) que_7.style.display = 'flex';
             });
         }
     }
 });
+
+const button_final = document.getElementById('button_final')
+
+button_final.addEventListener('click', () =>{
+    const correctAnswer = answers.filter(a => a === 1).length;
+    alert(`Правильных ответов ${correctAnswer} из 6`)
+})
+
+const button_again = document.getElementById('button_again')
+
+button_again.addEventListener('click', () =>{
+    que_7.style.display = 'none'
+    element.style.display = 'flex'
+})
